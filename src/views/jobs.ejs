@@ -1,0 +1,17 @@
+<div>
+    <div class="card-body">
+        <span>Actively hiring</span>
+        <% jobs.forEach(job => { %>
+          <p> <%= job.id %></p> 
+        <h3><%= job.companyName %></h3>
+        <p>Tech <span>Role</span></p>
+        <p>Icon andLocation</p>
+        <p>salary range</p>
+        <div>
+            skills
+        </div>
+        <% }) %>
+        <button>View details</button>
+        
+    </div>
+</div>

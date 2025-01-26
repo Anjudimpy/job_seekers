@@ -1,74 +1,89 @@
-.progress_item {
-    height: 200px;
-    width: 200px;
-    position: relative;
-    background: red;
-    border-radius: 50%;
-    overflow: hidden;
-    display: inline-block;
-    margin-right: 25px;
-    margin-bottom: 25px;
-  }
-  .progress_item .percent {
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: 3;
-    width: 100%;
+body, html {
+    margin: 0;
+    padding: 0;
     height: 100%;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background: linear-gradient( rgb(1, 74, 74), rgb(156, 248, 249), rgb(1, 78, 81)); /* Set full height for the parent elements */
+}
+
+.navbar{
+   background-color: rgb(241, 251, 249); 
+   box-shadow: 2px 2px 5px rgba(242, 252, 249, 0.5);
+   height: 10vh;
+}
+.navbar-brand{
+    color:rgb(4, 134, 134);
+    font-weight: bold;
+}
+.nav-item .nav-link{
+    font-weight: 500;
+    font-size: large;
+    color:rgb(1, 74, 74);
+}
+
+/*hero */
+
+.hero_container {
+    height: 100%; /* Full height relative to the parent (body/html) */
+    width: 100%; /* Full width */
     display: flex;
-    display: -webkit-flex;
-    align-items: center;
-    justify-content: center;
-    color: #000;
-    font-size: 64px;
-  }
-  .progress_item .water {
+    justify-content: space-between;
+    padding: 3em 6em;
+    color: white;
+}
+.hero-content{
+    margin-top: 4em;
+    text-shadow: 2px 2px 5px rgb(1, 74, 74);
+}
+.hero-content h1{
+    font-size: 3rem;
+    padding: 1rem 0;
+}
+.hero-content p{
+    font-size: 1.5rem;
+     color:rgb(1, 74, 74);
+     padding: 0.5rem 0;
+}
+.hero-btn-container button{
+    position: relative;
+    margin: 1rem 0;
+    width: 10rem;
+    padding: 9px 15px;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    font-weight: 500;
+    text-shadow: 2px 2px 5px rgb(198, 240, 240);
+    box-shadow: inset 2px 2px 5px rgba(108, 153, 145, 0.5);
+    background: linear-gradient(white,rgb(1, 74, 74));
+    overflow: hidden;
+    cursor: pointer; 
+}
+button::before {
+    content: "Job Seeker";
     position: absolute;
-    left: 0;
+    text-shadow: 2px 2px 5px rgb(225, 239, 239);
+    padding: 0.5em;
     top: 0;
-    z-index: 2;
+    left: -100%;
     width: 100%;
     height: 100%;
-    transform: translate(0, 100%);
-    background: blue;
-    transition: all 0.3s;
+    color: rgb(2, 75, 75);
+    font-weight: 500;
+    background: linear-gradient( rgba(1, 53, 53, 0.467), white);
+    transition: left 1s ease;
   }
-  .progress_item .water_wave {
-    width: 200%;
-    position: absolute;
-    bottom: 99%;
+  .btn1::before{
+    content: "I'm A Job Seeker";
   }
-  .progress_item .water_wave_back {
-    right: 0;
-    fill: blue;
-    animation: wave-back 1.4s infinite linear;
-    opacity: 0.5;
-  }
-  .progress_item .water_wave_front {
-    left: 0;
-    fill: var(--primary-color);
-    margin-bottom: -1px;
-    animation: wave-front 0.7s infinite linear;
+  .btn2::before{
+    content: "I'm A Recruiter";
   }
   
-  @keyframes wave-front {
-    100% {
-      transform: translate(-50%, 0);
-    }
+  button:hover::before {
+    left: 0; 
+    
   }
-  @keyframes wave-back {
-    100% {
-      transform: translate(50%, 0);
-    }
-  }
-  .news-letter .news-description a{
-	  color:blue;
-	  text-decoration:underline;
-	  transition:1s;
-	    }
-		
- .news-letter .news-description a:hover,
- .news-letter .news-description a:focus-within{
-	 text-decoration:dotted underline;
- }
+
+
+

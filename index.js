@@ -9,7 +9,7 @@ const app = express();
 // })
 app.use(express.static('src/views'));
 app.use(ejsLayouts);
-
+app.use(express.static('public'));
 app.set('view engine', 'ejs');
 app.set('views', path.join(path.resolve(),'src','views'));
 
@@ -19,7 +19,8 @@ app.set('views', path.join(path.resolve(),'src','views'));
 
 const jobController = new JobController();
 
-app.get('/', jobController.getJob);
+app.get('/', jobController.hero);
+app.get('/jobs', jobController.getJob);
 
 app.listen('3000',(req,res) =>{
     console.log('server is listening on 3000')

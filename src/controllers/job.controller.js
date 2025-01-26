@@ -1,5 +1,13 @@
+import JobModel from "../models/job.model.js";
+
 export default class JobController {
-    getJob(req,res) {
-        return res.render('layout');
+    hero(req,res) {
+        return res.render('hero');
+    }
+
+    getJob(req,res){
+        let jobs = JobModel.get();
+        console.log(jobs);
+        return res.render('jobs',{jobs});
     }
 }
