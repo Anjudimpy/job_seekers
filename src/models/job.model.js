@@ -22,7 +22,7 @@ var jobs = [
        "Html"
     ),
     new JobModel(
-        1,
+        2,
         "Company2",
         "Full stack Developer",
         "Delhi",
@@ -30,7 +30,7 @@ var jobs = [
         "Html"
      ),
      new JobModel(
-        1,
+        3,
         "Company3",
         "Full stack Developer",
         "Delhi",

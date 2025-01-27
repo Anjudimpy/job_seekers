@@ -1,8 +1,9 @@
-<div>
+<div class="card-container">
     <div class="card-body">
-        <span>Actively hiring</span>
-        <% jobs.forEach(job => { %>
-          <p> <%= job.id %></p> 
+    <% jobs.forEach(job => { %>
+    <div class="card-details">
+        <span class="card-head">Actively hiring</span>
+          <!-- <p> <%= job.id %></p>  -->
         <h3><%= job.companyName %></h3>
         <p>Tech <span>Role</span></p>
         <p>Icon andLocation</p>
@@ -10,8 +11,10 @@
         <div>
             skills
         </div>
-        <% }) %>
-        <button>View details</button>
+
+       <div class="jobBtn-container"> <button class="jobBtn">View details</button></div>
         
     </div>
+    <% }) %>
+</div>
 </div>
