@@ -1,11 +1,12 @@
 export default class JobModel{
-    constructor(id, companyName, jobRole, location, salaryRange, skills){
+    constructor(id, companyName, jobRole, location, salaryRange, skills = []){
         this.id = id;
         this.companyName = companyName;
         this.jobRole = jobRole;
         this.location = location;
         this.salaryRange = salaryRange;
         this.skills = skills;
+
     }
     static get(){
         return jobs;
@@ -19,7 +20,7 @@ var jobs = [
        "Full stack Developer",
        "Delhi",
        "10 - 20lpa",
-       "Html"
+       ["HTML", "CSS", "React", "Redux"]
     ),
     new JobModel(
         2,
@@ -27,7 +28,7 @@ var jobs = [
         "Full stack Developer",
         "Delhi",
         "10 - 20lpa",
-        "Html"
+        ["HTML", "CSS", "React", "Redux"]
      ),
      new JobModel(
         3,
@@ -35,6 +36,6 @@ var jobs = [
         "Full stack Developer",
         "Delhi",
         "10 - 20lpa",
-        "Html"
+        ["HTML", "CSS", "React", "Redux"]
      )
 ]

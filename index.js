@@ -21,6 +21,8 @@ const jobController = new JobController();
 
 app.get('/', jobController.hero);
 app.get('/jobs', jobController.getJob);
+app.get('/login', jobController.getLogin);
+app.get('/new', jobController.getNewJob);
 
 app.listen('3000',(req,res) =>{
     console.log('server is listening on 3000')

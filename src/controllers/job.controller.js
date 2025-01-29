@@ -10,4 +10,12 @@ export default class JobController {
         console.log(jobs);
         return res.render('jobs',{jobs});
     }
+
+    getLogin(req,res) {
+        return res.render('login');
+    }
+
+    getNewJob(req,res) {
+        return res.render('new-job');
+    }
 }
